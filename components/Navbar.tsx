@@ -52,7 +52,7 @@ function NavItem({ path, name}: {path: string; name: string}) {
             key={path}
             href={path}
             className={cx(
-                'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle', 
+                'transition-all flex align-middle text-[15px] tracking-[2px] uppercase font-semibold pb-2', 
                 {
                     'text-neutral-50': !isActive,
                 }
@@ -62,7 +62,8 @@ function NavItem({ path, name}: {path: string; name: string}) {
                 {name}
                 {path === pathname ? (
                     <motion.div
-                        className="absolute h-[1px] top-7 mx-2 inset-0 bg-neutral-200 dark:bg-neutral-800 z-[-1] dark:bg-gradient-to-r from-transparent to-neutral-900"
+                        className="absolute h-[2px] top-7 mx-2 inset-0 bg-neutral-200 dark:bg-yellow-500 z-[-1]"
+                        /*className="relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] before:bg-yellow-500 before:origin-[100%, 50%] before:transition-all before:duration-300 before:ease-in-out before:scale-x-0 before:scale-y-[1] before:scale-z-[1] before:will-change-transform hover:before:origin-[100&, 0%] hover:before:scale-x-[1] hover:before:scale-y-[1] hover:before:scale-z-[1] text-[12px] tracking-[2px] uppercase font-semibold pb-2"*/
                         layoutId = "sidebar"
                         transition={{
                             type: 'spring',
